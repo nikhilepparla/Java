@@ -1,13 +1,11 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("/");
-        while (scanner.hasNext()) {
-            System.out.println("Scanner " + scanner.next());
-        }
-        System.out.printf("Deliminator used " + scanner.delimiter().toString());
-        scanner.close();
+        String name = JOptionPane.showInputDialog("Enter your name ");
+        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
+        double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter your Salary"));
+        System.out.println("NAME is " + name + " and  AGE is " + age + " and Earns " + salary);
     }
 }
